@@ -1,0 +1,467 @@
+<robot
+  name="wurencar">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.116494052639358 0.741811667011434 -0.00142828222164451"
+        rpy="0 0 0" />
+      <mass
+        value="37007.9971081485" />
+      <inertia
+        ixx="9767.2698950291"
+        ixy="1557.5898738839"
+        ixz="105.632355315903"
+        iyy="92147.9903750358"
+        iyz="-10.6536395374499"
+        izz="91293.1128209872" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/base_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/base_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="w1_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.15706 0"
+        rpy="0 0 0" />
+      <mass
+        value="97.6804359629511" />
+      <inertia
+        ixx="4.39403611577315"
+        ixy="1.22512103226588E-16"
+        ixz="0"
+        iyy="7.54108875024598"
+        iyz="-3.12693870758953E-16"
+        izz="4.39403611577315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w1_Link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0274509803921569 0.0274509803921569 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w1_Link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w1_Joint"
+    type="continuous">
+    <origin
+      xyz="2.3646 -0.75126 0.3805"
+      rpy="-3.1416 -0.23525 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="w1_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="w2_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.15706 0"
+        rpy="0 0 0" />
+      <mass
+        value="97.6804359629511" />
+      <inertia
+        ixx="4.39403611577315"
+        ixy="3.72514414879988E-17"
+        ixz="-6.66133814775094E-16"
+        iyy="7.54108875024598"
+        iyz="2.32650261631468E-16"
+        izz="4.39403611577315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w2_Link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0274509803921569 0.0274509803921569 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w2_Link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w2_Joint"
+    type="continuous">
+    <origin
+      xyz="0.97657 -0.75126 0.3805"
+      rpy="-3.1416 -0.4179 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="w2_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="w3_Link">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-16 -0.15706 0"
+        rpy="0 0 0" />
+      <mass
+        value="97.6804359629512" />
+      <inertia
+        ixx="4.39403611577316"
+        ixy="-1.17674407096429E-16"
+        ixz="-2.22044604925031E-16"
+        iyy="7.54108875024599"
+        iyz="-2.58576132713767E-16"
+        izz="4.39403611577316" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w3_Link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0274509803921569 0.0274509803921569 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w3_Link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w3_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.42143 -0.75626 0.3805"
+      rpy="-3.1416 -0.61187 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="w3_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="w4_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.15706 0"
+        rpy="0 0 0" />
+      <mass
+        value="97.6804359629511" />
+      <inertia
+        ixx="4.39403611577315"
+        ixy="1.35604895333148E-15"
+        ixz="-4.44089209850063E-16"
+        iyy="7.54108875024598"
+        iyz="-1.29732553632333E-16"
+        izz="4.39403611577315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w4_Link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0274509803921569 0.0274509803921569 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w4_Link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w4_Joint"
+    type="continuous">
+    <origin
+      xyz="-1.8094 -0.7565 0.3805"
+      rpy="-1.2276E-16 1.0486 -1.064E-16" />
+    <parent
+      link="base_link" />
+    <child
+      link="w4_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="w5_Link">
+    <inertial>
+      <origin
+        xyz="1.11022302462516E-16 0.15706 0"
+        rpy="0 0 0" />
+      <mass
+        value="97.6804359629511" />
+      <inertia
+        ixx="4.39403611577315"
+        ixy="6.13525261207671E-16"
+        ixz="-1.38777878078145E-17"
+        iyy="7.54108875024598"
+        iyz="-3.43623019509713E-16"
+        izz="4.39403611577315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w5_Link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0274509803921569 0.0274509803921569 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w5_Link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w5_Joint"
+    type="continuous">
+    <origin
+      xyz="2.3646 0.7615 0.3805"
+      rpy="-3.1416 1.5533 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="w5_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="w6_Link">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-16 0.15706 0"
+        rpy="0 0 0" />
+      <mass
+        value="97.6804359629511" />
+      <inertia
+        ixx="4.39403611577315"
+        ixy="9.59510354954716E-17"
+        ixz="0"
+        iyy="7.54108875024598"
+        iyz="-4.86412317183669E-16"
+        izz="4.39403611577315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w6_Link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0274509803921569 0.0274509803921569 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w6_Link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w6_Joint"
+    type="continuous">
+    <origin
+      xyz="0.97657 0.7615 0.3805"
+      rpy="-6.8885E-17 0.4759 -3.1559E-17" />
+    <parent
+      link="base_link" />
+    <child
+      link="w6_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="w7_Link">
+    <inertial>
+      <origin
+        xyz="0 0.15706 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="97.6804359629511" />
+      <inertia
+        ixx="4.39403611577316"
+        ixy="1.29319818307777E-17"
+        ixz="-3.33066907387547E-16"
+        iyy="7.54108875024599"
+        iyz="-6.27910632203099E-17"
+        izz="4.39403611577315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w7_Link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0274509803921569 0.0274509803921569 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w7_Link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w7_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.42143 0.7565 0.3805"
+      rpy="-1.2276E-16 1.0486 -1.064E-16" />
+    <parent
+      link="base_link" />
+    <child
+      link="w7_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="w8_Link">
+    <inertial>
+      <origin
+        xyz="0 0.15706 0"
+        rpy="0 0 0" />
+      <mass
+        value="97.6804359629511" />
+      <inertia
+        ixx="4.39403611577315"
+        ixy="-1.21459052971243E-16"
+        ixz="-1.11022302462516E-15"
+        iyy="7.54108875024598"
+        iyz="6.7864512439068E-16"
+        izz="4.39403611577315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w8_Link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0274509803921569 0.0274509803921569 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wurencar/meshes/w8_Link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w8_Joint"
+    type="continuous">
+    <origin
+      xyz="-1.8094 0.75626 0.3805"
+      rpy="-3.1416 0.72044 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="w8_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+</robot>
